@@ -2,6 +2,7 @@
 body {
     background-image: url(backgroundPhotos/1.jpg);
     background-size: 100vw auto;
+    background-repeat: no-repeat;
     transition: all 0.5s;
 }
 

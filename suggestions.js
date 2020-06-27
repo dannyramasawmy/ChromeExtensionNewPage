@@ -5,7 +5,7 @@
 // Your name.
 var myName = "Danny"
 // The input message.
-var myMsg = ["What will you do today?","How many days till holiday?","What will you eat today?","How are you today?"]
+var myMsg = ["What will you do today?","How many days till Christmas?","What will you eat today?","How are you today?"]
 
 // Name of the images.
 var myImages = ["1","2","3","4","5","6","7","8"]
