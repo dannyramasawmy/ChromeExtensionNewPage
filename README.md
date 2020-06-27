@@ -1,6 +1,18 @@
 # ChromeExtensionNewPage
-Replaces the new page in google chrome. The suggestions.js file can be edited to personalise the page. This has been tailored for a musicial practice routine!
+## Overview
+This extension replaces the new page in google chrome. 
 
+## Installation
+1. Download the repository.
+2. Go to chrome://extensions/.
+3. Enable developer mode.
+4. Load unpacked extension and navigate to the downloaded repository.
+
+## Customisation
+This extension has been tailored for a musical practice routine!
+The suggestions.js file can be edited to personalise the page.
+
+## Tree
 Tree was compiles 2020-06-27:
 ``` bash
 .
