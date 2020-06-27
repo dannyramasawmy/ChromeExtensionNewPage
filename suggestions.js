@@ -102,6 +102,7 @@ function timeKeep() {
 // Set your name.
 setElementID("myName", "Hello " + myName)
 setElementID("titleMessage", myName + "'s New Page")
+changePic()
 
 // Set date and time.
 setElementID("dateTime", formatADT())
@@ -130,7 +131,7 @@ for (i = 0; i < 5; i++) {
 }
  
 // Every x seconds update welcome message and background.
-var timeInterval = 1 // [seconds]
+var timeInterval = 10 // [seconds]
 setInterval(timeKeep, timeInterval * 1000);
 
 
