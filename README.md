@@ -2,6 +2,9 @@
 ## Overview
 This extension replaces the new page in google chrome. 
 
+## Author
+Danny Ramasawmy
+
 ## Installation
 1. Download the repository.
 2. Go to chrome://extensions/.
