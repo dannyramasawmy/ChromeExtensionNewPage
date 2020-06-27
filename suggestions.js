@@ -12,6 +12,7 @@ var myImages = ["1","2","3","4","5","6","7","8"]
 
 
 // The labels for each suggestion 1-5, each suggestion is an array of items.
+var suggestionsTitle = ['Music Practice:']
 var suggestionsLabels = ["Scale", "Key", "Pattern", "Progression", "Song"]
 // Scale practice.
 var suggestions0 = ["Ionian DI","Dorian Dii","Phrygian Diii",              
@@ -39,6 +40,7 @@ var suggestions4 = ["Autumn Leaves","Someday my Prince Will Come"
 
 
 // weblinks 1:4 and their labels
+var myLinkTitle = ["Links:"]
 var myLinkLabel = ["BBC News", "Favorite Music", "Email", "Software Toolbox", "Next Holiday!"]
 var myLinks = ["https://www.bbc.com/",
     "https://www.youtube.com/watch?v=ECLoE-bw3Kw",
@@ -92,6 +94,7 @@ function timeKeep() {
 
     // Set the welcome message.
     setElementID("questionMessage", randomArrayElement(myMsg))
+    // Update background.
     changePic()
 }
 
@@ -102,6 +105,8 @@ function timeKeep() {
 // Set your name.
 setElementID("myName", "Hello " + myName)
 setElementID("titleMessage", myName + "'s New Page")
+setElementID("suggestionsTitle", suggestionsTitle)
+setElementID("webLinkTitle", myLinkTitle)
 changePic()
 
 // Set date and time.
