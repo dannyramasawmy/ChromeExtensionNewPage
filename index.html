@@ -1,0 +1,79 @@
+ <html>
+    <!-- The head -->
+    <head>
+        <!-- The title appears in the tab at the top of the browser. -->
+        <title id=titleMessage> </title>
+        <!-- Link the CSS style sheet. -->
+        <link rel="stylesheet" href=newPageStyle.css>
+    </head>
+
+    <!-- The main body
+    The page will be divided up into three sections as seen below. 
+    [ 1     ]
+    [ 2 | 3 ]
+    1 : will introduce the name with a welcome message and statement/question.
+    2 : will have reminders / suggestions / fun facts.
+    3 : will have links to useful webpages.
+    --> 
+    <body  id="myBackgroundImage" >
+
+        <!-- The main body section 1. -->    
+        <!-- This adds the date and time at the top. -->
+        <header>            
+            <h5 id="dateTime"></h5>
+        </header>
+        <!-- This prints "Hello <name>". --> 
+        <div class="helloName">
+            <h1 id=myName> </h1>
+        </div>
+        <!-- Print a question like, "how are you?". -->   
+        <div class="welcomeMessage">    
+            <h3 id="questionMessage"></h3>
+        </div>
+
+
+        <!-- The main body section 2 & 3.  -->
+        <section>
+            
+            <!-- Suggestions, the main body section 2. Cycles through a list of suggestions. --> 
+            <div class="leftBox">
+                <!-- Title. -->
+                <h2>
+                Music Practice:
+                </h2>
+
+                <!-- Suggestions. -->
+                <h4 class="hoverColor" id="suggestions0"></h4>
+                <h4 id="suggestions1"></h4>
+                <h4 id="suggestions2"></h4>
+                <h4 id="suggestions3"></h4>
+                <h4 id="suggestions4"></h4>
+            </div>
+
+            <!-- Links, the main body section 3. --> 
+            <div class="rightBox">
+                <!-- Title. -->
+                <h2> Links: </h2>
+
+                <!-- Webpage links 1:5. -->
+                <h4> <a id="webLink0"> </a> </h4> 
+                <h4> <a id="webLink1"> </a> </h4>
+                <h4> <a id="webLink2"> </a> </h4>
+                <h4> <a id="webLink3"> </a> </h4>
+                <h4> <a id="webLink4"> </a> </h4>
+                <!-- Link to personal pages. -->
+
+            </div>
+
+        </section>
+
+        <!-- Do nothing in footer--> 
+        <footer> </footer>
+    </body>
+</html>
+
+<!-- Add javascript.  -->
+<script src="suggestions.js"></script>
+
+
+

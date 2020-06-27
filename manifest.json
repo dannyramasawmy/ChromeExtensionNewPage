@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    
+    "name": "Personalised Home Page",
+    "description": "This extension replaces Google Chrome's default homepage.",
+    "version": "2.0",
+    
+    "chrome_url_overrides" : {
+        "newtab": "index.html"
+    },
+    
+    "browser_action": {
+    "default_icon": "Logo.png"
+    },
+    
+    "permissions": [
+        "tabs"
+    ],
+    
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    }
+    
+}

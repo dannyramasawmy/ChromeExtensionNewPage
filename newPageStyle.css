@@ -1,0 +1,131 @@
+/* Body background image. */
+body {
+    background-image: url(backgroundPhotos/1.jpg);
+    background-size: 100vw auto;
+    transition: all 0.5s;
+}
+
+/* Header properties. */
+header {
+    margin: 10px   
+}
+
+/* Division properties. */
+div {
+    margin: 0px;
+}
+/* Division Hello <name> properties. */
+div.helloName {
+    font-family: Verdana bold;
+    margin: 50px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+/* Division question/message properties. */
+div.welcomeMessage {
+    margin: 50px;   
+}
+
+/* Section properties with links and suggestions. */
+section {
+    margin: 50px;
+    overflow: hidden;   
+}
+
+/* Leftbox suggestion box properties. */
+div.leftBox {
+    float: left;
+    width: 50%;
+    transition: all 2s;
+}
+div.leftBox:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+       border-radius: 20px;
+}
+/* Rightbox suggestion box properties. */
+div.rightBox {
+    float: right;
+    width: 50%;
+    transition: all 1s;
+}
+div.rightBox:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+      color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hyperlink text properties */
+a {
+    text-decoration: none;
+    transition: color 1s;
+    color: rgba(255, 255, 255, 0.5);     
+}
+a:hover {
+color: #ff0099;
+}
+
+/* Hello <name> text properties. */
+h1 {
+    margin: 50px;
+    font-family: Verdana;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 1.5;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Display question/message text properties. */
+h3 {
+    font-family: Verdana;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);;
+}
+
+/* Suggestions and links title, text properties.  */
+h2 {
+    font-family: Verdana;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 1s
+}
+h2:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Suggestions and links text properties. */
+h4 {
+    font-family: Verdana;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+    transition: all 1s
+}
+h4:hover {
+color: #ff0099;
+}
+
+/* Date and time text properties. */
+h5 {
+    font-family: Verdana;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 2s
+}
+h5:hover {
+color: #ff0099;
+}
+
+
