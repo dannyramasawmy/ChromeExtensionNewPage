@@ -2,6 +2,9 @@
 ## Overview
 This extension replaces the new page in google chrome. 
 
+## Example
+https://dannyramasawmy.github.io/ChromeExtensionNewPage/
+
 ## Author
 Danny Ramasawmy
 
