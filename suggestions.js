@@ -1,52 +1,20 @@
 // ================================================================
 //  VARIABLES
 // ================================================================
-
-// Your name.
-var myName = "Danny"
-// The input message.
-var myMsg = ["What will you do today?","How many days till Christmas?","What will you eat today?","How are you today?"]
-
-// Name of the images.
-var myImages = ["1","2","3","4","5","6","7","8","9"]
-
-
-// The labels for each suggestion 1-5, each suggestion is an array of items.
-var suggestionsTitle = ['Music Practice:']
-var suggestionsLabels = ["Scale", "Key", "Pattern", "Progression", "Song"]
-// Scale practice.
-var suggestions0 = ["Ionian DI","Dorian Dii","Phrygian Diii",              
-                "Lydian DIV","Mixolydian DV","Aeolian Dvi", "Locrian Dviii", 
-                "Melodic Minor Mi","Dorian b2 Mii","Lydian Augemented MIII", 
-                "Lydian b7 MIV","Aeolian Major (Mix b6) MV","Locrian n2 Mvi","Altered (super) MVII",
-                "Harmonic Minor Hi","Dorian #4 Hiv","Phryigan Major HV","Diminished", 
-                "Whole Tone","Lydian #2 Hvi","Symmetric Dominant","Major Pentatonic","Minor Pentatonic"]
-// Key choice.                
-var suggestions1 = ["C","G (1#)","D (2#'s)","A (3#'s)","E (4#'s)","B (5#'s)",
-    "F# (6#'s)","Gb (6b's)","Db (5b's)","Ab (4b's)","Eb (3b's)","Bb (2b's)","F (1b)"]
-// Practice pattern.
-var suggestions2 = ["1-2-3","1-2-3-1","3-2-1-3","1-2-3-5","Arp 7","Triad",
-                "1-2-3-4","Enclosed root","Enclosed 5th","Honeysuckle","4ths","5ths","6ths","7ths"]
-// Practice progression.
-var suggestions3 = ["iim7-V7-IM7","iim7b5-V7-im7","I-vim7-iim7-V7",
-              "I-II7-iim7-V7","III7-VI7-II7-V7"]
-// Songs to practice.
-var suggestions4 = ["Autumn Leaves","Someday my Prince Will Come"
-             ,"All of me", "Blue Bossa","Take the A Train",
-             "So What","Round Midnight","Rhythm Changes",
-              "All the things you are","Major 2-5-1","Minor 2-5-1",
-             "Recordame","Stella by Starlight","Blues",
-             "Body and Soul","Maiden Voyage","Fly to me the Moon","Footprints","Black Nile","How High the Moon"]
-
-
-// weblinks 1:4 and their labels
-var myLinkTitle = ["Links:"]
-var myLinkLabel = ["BBC News", "Favorite Music", "Email", "Software Toolbox", "Next Holiday!"]
-var myLinks = ["https://www.bbc.com/",
-    "https://www.youtube.com/watch?v=ECLoE-bw3Kw",
-    "https://www.gmail.com",
-    "https://dannyramasawmy.github.io/ElasticMatrix/",
-    "https://en.wikipedia.org/wiki/Mauritius"]
+// Data is stored in arrays and objects in data.js.
+// Define variables here when testing.
+// Temporary/Test object for suggestions.
+suggestionsObject = {
+    "title":"Suggestions:",
+    "containerType":"suggestions",
+    "suggestionArray": [
+        { "label":"A |",        "suggestions":["A0", "A1", "A2", "A3", "A4"]  },
+        { "label":"B |",        "suggestions":["B0", "B1", "B2", "B3", "B4"]  },
+        { "label":"C |",        "suggestions":["C0", "C1", "C2", "C3", "C4"]  },
+        { "label":"D |",        "suggestions":["D0", "D1", "D2", "D3", "D4"]  },
+        { "label":"E |",        "suggestions":["E0", "E1", "E2", "E3", "E4"]  },
+    ]
+}
 
 // ================================================================
 //  FUNCTIONS
@@ -155,18 +123,21 @@ for (i = 0; i < 5; i++) {
 }
 
 // Set web links.
-for (i = 0; i < 5; i++) {
-    // Set web links title
-    setElementID("webLinkTitle", myLinkTitle)
-    // Make the weblink ID.
-    tmpID = "webLink"+i.toString();
-    // Get the element.
-    tmpElement = document.getElementById(tmpID);
-    // Set the inner html.
-    tmpElement.innerHTML = myLinkLabel[i];
-    // Set the web link address.
-    tmpElement.href = myLinks[i];
+linksContainer = document.getElementById("linksContainer");
+linksContainer.innerHTML = '<h1 class="hvrClr2">' + webLinksObject.title + '</h1>'
+// Set web links.
+for (i = 0; i < webLinksObject.linkArray.length; i++) {
+    // Get the label and the link for that label from the object file.
+    label = webLinksObject.linkArray[i].label;
+    link = webLinksObject.linkArray[i].link;
+    // Create HTML code.
+    linksContainer.innerHTML = linksContainer.innerHTML + 
+    '<h2> <a class="hvrClr1"' + 
+    ' href="' +
+    link + '">' +
+    label +'</a> </h2>' ;    
 }
+
 
 // Every x seconds update welcome message and background.
 var timeInterval = 10 // [seconds]
