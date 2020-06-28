@@ -2,6 +2,7 @@
 body {
     background-image: url(backgroundPhotos/1.jpg);
     background-size: cover;
+
     /* background-repeat: no-repeat; */
     transition: all 1s;
 
@@ -9,8 +10,38 @@ body {
     font-weight: 900;
     line-height: 1.5;
     text-align: center;
+
 }
 
+/* Get rid of cursor highlighting. */
+::selection {
+    background: none;
+  }
+
+/*  Input properties. */
+input[type=text] {
+    width: 60%;
+    height: auto;
+
+    background-color: rgba(0, 0, 0, 0.35);
+    color:  rgba(255, 255, 255, 0.8);
+    
+    text-align: center;
+    margin: 40px;
+    
+    font-size: 50px;
+    border-radius: 20px;
+    border-width: 0px;
+    border-color: none;
+    outline: none;
+    padding: none;
+}
+
+form {
+    margin: 0px;
+    border: none;
+    padding: none;
+}
 
 /* Header properties. */
 header {
@@ -24,7 +55,7 @@ div {
 /* Division Hello <name> properties. */
 div.helloName {
     margin: 50px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 2px solid #eeeeee;
 }
 
 /* Division question/message properties. */
@@ -36,17 +67,21 @@ div.welcomeMessage {
 section {
     margin: 50px;
     overflow: hidden;   
+    /* Wrapping of containers with links.  */
     display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
 }
 
 /* Rightbox suggestion box properties. */
 section div{
-    width: 50%;
+    width: 30%; 
 }
 section div:hover {
-    /* background-color: rgba(0, 0, 0, 0.35); */
+    background-color: rgba(0, 0, 0, 0.35);
     border-radius: 20px;
     color: rgba(255, 255, 255, 0.8);
+    transition: 2s;
 }
 
 /*  Hover color. */
@@ -83,13 +118,13 @@ h2 {
 section div h1{
     font-size: 20px;
     margin: 0px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* Suggestions and links text properties. */
 section div h2 {
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 /* Date and time text properties. */

@@ -8,7 +8,7 @@ var myName = "Danny"
 var myMsg = ["What will you do today?","How many days till Christmas?","What will you eat today?","How are you today?"]
 
 // Name of the images.
-var myImages = ["1","2","3","4","5","6","7","8"]
+var myImages = ["1","2","3","4","5","6","7","8","9"]
 
 
 // The labels for each suggestion 1-5, each suggestion is an array of items.
@@ -93,38 +93,71 @@ function timeKeep() {
     setElementID("dateTime", formatADT())
 
     // Set the welcome message.
-    setElementID("questionMessage", randomArrayElement(myMsg))
+    setElementID("welcomeMessage", randomArrayElement(myMsg))
     // Update background.
     changePic()
 }
 
+function updateSuggestions(index, suggestionsLabel) {
+    // This function updates the suggestions of the specified index.
+    // Create suggestion name.
+    suggestionName = "suggestions" + index.toString()
+    // Set the suggestion.
+    setElementID(suggestionName, suggestionsLabel + " | " + randomArrayElement(window[suggestionName]) )
+    // Return the suggestion name.
+}
+
+function searchText() {
+    // This function searches whatever the user typed.
+    // Replace inner html
+    document.getElementById("helloNameElement").innerHTML = '                   \
+        <form method="get" action="https://www.google.com/search">              \
+            <input id="searchBox" type="text" name="q" size="31" value="" placeholder="Search ">      \
+        </form> ' 
+    // Apply focus to search box straight away.
+    document.getElementById("searchBox").focus();
+}
+
 // ================================================================
-//  RUN FUNCTIONS
+//  RUN FUNCTIONS / MAIN SCRIPT
 // ================================================================
 
 // Set your name.
 setElementID("myName", "Hello " + myName)
-setElementID("titleMessage", myName + "'s New Page")
-setElementID("suggestionsTitle", suggestionsTitle)
-setElementID("webLinkTitle", myLinkTitle)
-changePic()
+// When someone starts typing enter search box.
+window.addEventListener(["keypress"], searchText, {once : true})
+// If someone clicks the name then start searching.
+document.getElementById("myName").addEventListener("click", searchText, {once : true})
 
+// Set tab name.
+setElementID("titleMessage", myName + "'s New Page")
 // Set date and time.
 setElementID("dateTime", formatADT())
+// Update picture.
+changePic()
 
 // Set welcome message.
-setElementID("questionMessage"  , randomArrayElement(myMsg) )
+setElementID("welcomeMessage"  , randomArrayElement(myMsg) )
+// Update message with an event listener.
+document.getElementById("welcomeMessage").addEventListener("click", function () {setElementID("welcomeMessage"  , randomArrayElement(myMsg) )} )
+
 
 // Set suggestions.
 for (i = 0; i < 5; i++) {
-    // Create suggestion name.
-    suggestionName = "suggestions" + i.toString()
-    // Set the suggestion.
-    setElementID(suggestionName, suggestionsLabels[i] + " | " + randomArrayElement(window[suggestionName]) )
+    // Set suggestions title.
+    setElementID("suggestionsTitle", suggestionsTitle)
+    // Update suggestions.
+    updateSuggestions(i, suggestionsLabels[i])
+    // Loop add event listeners for click to change the suggestion.
+    suggestID = document.getElementById("suggestions"+String(i));
+    // Use the .bind(this, arguments) to allow this to work in for-loop.
+    suggestID.addEventListener("click", updateSuggestions.bind(this, i, suggestionsLabels[i]) );
 }
 
 // Set web links.
 for (i = 0; i < 5; i++) {
+    // Set web links title
+    setElementID("webLinkTitle", myLinkTitle)
     // Make the weblink ID.
     tmpID = "webLink"+i.toString();
     // Get the element.
@@ -134,9 +167,7 @@ for (i = 0; i < 5; i++) {
     // Set the web link address.
     tmpElement.href = myLinks[i];
 }
- 
+
 // Every x seconds update welcome message and background.
 var timeInterval = 10 // [seconds]
 setInterval(timeKeep, timeInterval * 1000);
-
-
