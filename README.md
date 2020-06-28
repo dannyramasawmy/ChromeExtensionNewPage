@@ -3,7 +3,7 @@
 This extension replaces the new page in google chrome. 
 
 ## Example
-https://dannyramasawmy.github.io/ChromeExtensionNewPage/
+Link to the website published with github pages here: [New Page Extension](https://dannyramasawmy.github.io/ChromeExtensionNewPage/)
 
 ## Author
 Danny Ramasawmy
