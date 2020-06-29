@@ -16,8 +16,8 @@ Raj Ramasawmy
 
 ## Customisation
 This extension has been tailored for a musical practice routine!
-The suggestions.js file can be edited to personalise the page, messages and links.
-Add your own images (.jpg) to the backgroundPhotos folder, add the name of the images to the suggestions.js file afterwards. 
+The data.js file can be edited to personalise the page, messages and links.
+Add your own images (.jpg) to the backgroundPhotos folder, add the name of the images to the data.js file afterwards. 
 
 ## Tree
 Tree was compiles 2020-06-27:
