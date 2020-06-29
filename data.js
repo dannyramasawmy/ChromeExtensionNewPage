@@ -3,7 +3,7 @@
 // ================================================================
 
 // Your name.
-var myName = ""
+var myName = " name "
 
 // The input message.
 var myMsg = [
