@@ -7,6 +7,7 @@ Link to the website published with github pages here: [New Page Extension](https
 
 ## Author
 Danny Ramasawmy
+
 Raj Ramasawmy
 
 ## Installation
