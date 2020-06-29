@@ -8,6 +8,7 @@ Link to the website published with github pages here: [New Page Extension](https
 ## Author
 Danny Ramasawmy
 Raj Ramasawmy
+
 ## Installation
 1. Download the repository.
 2. Go to chrome://extensions/.
