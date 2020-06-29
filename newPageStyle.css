@@ -69,21 +69,26 @@ section {
     overflow: hidden;   
     /* Wrapping of containers with links.  */
     display: flex;
-    flex-wrap: wrap;
-    justify-content:space-around;
+    flex-direction: row;
+    justify-content:space-around; 
 }
 
 /* Rightbox suggestion box properties. */
 section div{
+    min-width: 300px;
     width: 30%; 
+    background-color: rgba(0, 0, 0, 0.35);
 }
 section div:hover {
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.45);
     border-radius: 20px;
     color: rgba(255, 255, 255, 0.8);
-    transition: 2s;
+    transition: ease-in-out;
 }
-
+section h1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
 /*  Hover color. */
 .hvrClr1:hover {
     color: #ff0099;
@@ -134,4 +139,9 @@ h3 {
     color: rgba(255, 255, 255, 0.6);
 }
 
-
+/* Media query for page width */
+@media screen and (max-width: 700px){
+    section {
+         flex-direction: column;
+    }
+}
