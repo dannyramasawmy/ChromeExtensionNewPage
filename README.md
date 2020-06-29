@@ -2,6 +2,9 @@
 ## Overview
 This extension replaces the new page in google chrome. 
 
+## Example
+Link to the website published with github pages here: [New Page Extension](https://dannyramasawmy.github.io/ChromeExtensionNewPage/)
+
 ## Author
 Danny Ramasawmy
 
