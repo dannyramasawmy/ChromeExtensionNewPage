@@ -12,8 +12,6 @@ var myMsg = [
     "What will you eat today?",
     "How are you today?",
     "Why is Gamora?",
-    "Am I going to be squishy today?",
-    "Where is my squishy?",
     "Do you need a 5 minute break?"
 ]
 
