@@ -98,7 +98,7 @@ window.addEventListener(["keypress"], searchText, {once : true})
 document.getElementById("myName").addEventListener("click", searchText, {once : true})
 
 // Set tab name.
-setElementID("titleMessage", myName +  "butt")
+setElementID("titleMessage", myName)
 // Set date and time.
 setElementID("dateTime", formatADT())
 // Update picture.
