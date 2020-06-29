@@ -12,6 +12,7 @@ var myMsg = [
     "What will you eat today?",
     "How are you today?",
     "Why is Gamora?",
+    "Do you need a 5 minute break?"
 ]
 
 // Name of the images.
@@ -27,10 +28,11 @@ webLinksObject = {
     "containerType":"links",
     "linkArray": [
         { "label":"BBC News",           "link":"https://www.bbc.com/"                             },
-        { "label":"Favorite Music",     "link":"https://www.youtube.com/watch?v=ECLoE-bw3Kw"      },
+        { "label":"GDrive",             "link":"https://drive.google.com/drive/my-drive"          },
         { "label":"Email",              "link":"https://www.gmail.com"                            },
+        { "label":"Youtube",            "link":"https://www.youtube.com"                          },  
         { "label":"Software Toolbox",   "link":"https://dannyramasawmy.github.io/ElasticMatrix/"  },
-        { "label":"Next Holiday!",      "link":"https://en.wikipedia.org/wiki/Mauritius"          },
+
     ]
 }
 
