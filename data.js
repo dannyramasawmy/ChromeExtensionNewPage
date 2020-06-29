@@ -3,7 +3,7 @@
 // ================================================================
 
 // Your name.
-var myName = " name "
+var myName = "Danny"
 
 // The input message.
 var myMsg = [
@@ -12,12 +12,14 @@ var myMsg = [
     "What will you eat today?",
     "How are you today?",
     "Why is Gamora?",
+    "Am I going to be squishy today?",
+    "Where is my squishy?",
     "Do you need a 5 minute break?"
 ]
 
 // Name of the images.
 var myImages = [
-    "1","2","3","4","5","6","7","8","9","10"
+    "1","2","3","4","5","6","7","8","9"
 ]
 // ================================================================
 //  WEB LINKS

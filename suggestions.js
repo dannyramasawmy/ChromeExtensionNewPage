@@ -98,7 +98,7 @@ window.addEventListener(["keypress"], searchText, {once : true})
 document.getElementById("myName").addEventListener("click", searchText, {once : true})
 
 // Set tab name.
-setElementID("titleMessage", myName)
+setElementID("titleMessage", myName + "'s New Page")
 // Set date and time.
 setElementID("dateTime", formatADT())
 // Update picture.
@@ -140,5 +140,5 @@ for (i = 0; i < webLinksObject.linkArray.length; i++) {
 
 
 // Every x seconds update welcome message and background.
-var timeInterval = 30 // [seconds]
+var timeInterval = 10 // [seconds]
 setInterval(timeKeep, timeInterval * 1000);
