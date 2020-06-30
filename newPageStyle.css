@@ -16,7 +16,7 @@ body {
 /* Get rid of cursor highlighting. */
 ::selection {
     background: none;
-  }
+}
 
 /*  Input properties. */
 input[type=text] {
@@ -140,11 +140,12 @@ h3 {
     color: rgba(255, 255, 255, 0.6);
 }
 
+
 /* Media query for orientation */
 @media only screen and (orientation: portrait){
     section {
-         flex-direction: column;
-         justify-content: center; 
+        flex-direction: column;
+        justify-content: center; 
     }
     section div{
         min-width: 300px;
@@ -152,5 +153,38 @@ h3 {
         margin: 10%;
         border-radius: 20px;
         justify-content: center; 
+    }
+
+        /* Hello <name> text properties. */
+    h1 {
+        margin: 5%;
+        font-size: 80px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Display question/message text properties. */
+    h2 {
+        font-size: 30px;
+        color: rgba(255, 255, 255, 0.8);;
+    }
+
+    /* Suggestions and links title, text properties.  */
+    section div h1{
+        font-size: 50px;
+        margin: 0px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Suggestions and links text properties. */
+    section div h2 {
+        font-size: 40px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Date and time text properties. */
+    h3 {
+        font-size: 20px;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.6);
     }
 }
