@@ -62,8 +62,18 @@ function timeKeep() {
 
     // Set the welcome message.
     setElementID("welcomeMessage", randomArrayElement(myMsg))
-    // Update background.
-    changePic()
+   
+    // Only change background if landscape, mobile is slower or less powerful.
+    if (window.innerWidth > window.innerHeight) {
+        // Update background.
+        changePic()
+    } 
+
+    // Portrait photo id not
+    if (window.innerWidth < window.innerHeight) {
+        document.getElementById("myBackgroundImage").style = 
+        "background-image: url(backgroundPhotos/port.jpg)"
+    }
 }
 
 function updateSuggestions(index, suggestionsLabel) {
@@ -142,3 +152,5 @@ for (i = 0; i < webLinksObject.linkArray.length; i++) {
 // Every x seconds update welcome message and background.
 var timeInterval = 30 // [seconds]
 setInterval(timeKeep, timeInterval * 1000);
+
+
