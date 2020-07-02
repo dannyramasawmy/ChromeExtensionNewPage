@@ -1,6 +1,7 @@
 /* Body background image. */
 body {
     background-image: url(backgroundPhotos/1.jpg);
+    background-position: center;
     background-size: cover;
 
     /* background-repeat: no-repeat; */

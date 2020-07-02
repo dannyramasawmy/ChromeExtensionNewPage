@@ -8,11 +8,11 @@ suggestionsObject = {
     "title":"Suggestions:",
     "containerType":"suggestions",
     "suggestionArray": [
-        { "label":"A |",        "suggestions":["A0", "A1", "A2", "A3", "A4"]  },
-        { "label":"B |",        "suggestions":["B0", "B1", "B2", "B3", "B4"]  },
-        { "label":"C |",        "suggestions":["C0", "C1", "C2", "C3", "C4"]  },
-        { "label":"D |",        "suggestions":["D0", "D1", "D2", "D3", "D4"]  },
-        { "label":"E |",        "suggestions":["E0", "E1", "E2", "E3", "E4"]  },
+        { "label":"A",        "suggestions":["A0", "A1", "A2", "A3", "A4"]  },
+        { "label":"B",        "suggestions":["B0", "B1", "B2", "B3", "B4"]  },
+        { "label":"C",        "suggestions":["C0", "C1", "C2", "C3", "C4"]  },
+        { "label":"D",        "suggestions":["D0", "D1", "D2", "D3", "D4"]  },
+        { "label":"E",        "suggestions":["E0", "E1", "E2", "E3", "E4"]  },
     ]
 }
 
@@ -85,6 +85,8 @@ function updateSuggestions(index, suggestionsLabel) {
     // Return the suggestion name.
 }
 
+// function updateSuggestions2(index, )
+
 function searchText() {
     // This function searches whatever the user typed.
     // Replace inner html
@@ -146,6 +148,49 @@ for (i = 0; i < webLinksObject.linkArray.length; i++) {
     ' href="' +
     link + '">' +
     label +'</a> </h2>' ;    
+}
+
+// Auto set suggestions.
+suggestionsContainer = document.getElementById("suggestionsContainer");
+suggestionsContainer.innerHTML = '<h1 class="hvrClr2">' + suggestionsObject.title + '</h1>'
+// Set suggestions.
+for (i = 0; i < suggestionsObject.suggestionArray.length; i++) {
+    // Get the label.
+    label = suggestionsObject.suggestionArray[i].label;
+    sugArray = suggestionsObject.suggestionArray[i].suggestions;
+    // Create a unique id
+    uid = "label" +  String(i)
+    // Set the label as text.
+    suggestionsContainer.innerHTML = suggestionsContainer.innerHTML +
+    '<h2 class="hvrClr1" id="' + uid + '" >' + 
+    label + '</h2>';
+    // update the string
+
+    //setElementID(uid, label + " | " + randomArrayElement(suggestionsObject.suggestionArray[i].suggestions) )
+    update2(i)
+    // console.log(uid)
+    // console.log(label)
+    // console.log(sugArray)
+    // // setElementID(uid, "hi" + String(i))
+    adder(i)
+}
+
+
+// TODO: try add event listener outside of function
+function adder(i) {
+    suggestID = document.getElementById("label"+String(i));
+    suggestID.addEventListener("click", 
+        update2.bind(this, i) ) ;
+}
+
+
+function update2(i) {
+    suggestionsObject.suggestionArray[i].suggestion
+
+
+    theid = "label" + String(i)
+    setElementID(theid, suggestionsObject.suggestionArray[i].label + 
+        " | " + randomArrayElement(suggestionsObject.suggestionArray[i].suggestions))
 }
 
 
