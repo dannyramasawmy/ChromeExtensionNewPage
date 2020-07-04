@@ -150,47 +150,27 @@ for (i = 0; i < webLinksObject.linkArray.length; i++) {
     label +'</a> </h2>' ;    
 }
 
-// Auto set suggestions.
-suggestionsContainer = document.getElementById("suggestionsContainer");
-suggestionsContainer.innerHTML = '<h1 class="hvrClr2">' + suggestionsObject.title + '</h1>'
-// Set suggestions.
-for (i = 0; i < suggestionsObject.suggestionArray.length; i++) {
-    // Get the label.
-    label = suggestionsObject.suggestionArray[i].label;
-    sugArray = suggestionsObject.suggestionArray[i].suggestions;
-    // Create a unique id
-    uid = "label" +  String(i)
-    // Set the label as text.
-    suggestionsContainer.innerHTML = suggestionsContainer.innerHTML +
-    '<h2 class="hvrClr1" id="' + uid + '" >' + 
-    label + '</h2>';
-    // update the string
+// Get SuggestionsContainer. IT WORKS!
+newele = document.getElementById("suggestionsContainer")
+// Create a title node.
+node = document.createElement("H1")
+// Set the inner child.
+node.innerHTML = suggestionsObject.title;
+// Add the child
+newele.appendChild(node)
+// loop and add elements
+for (let i = 0; i < suggestionsObject.suggestionArray.length; i++) {
+    node = document.createElement("H2")
+    setInnerHTML(node, i)
 
-    //setElementID(uid, label + " | " + randomArrayElement(suggestionsObject.suggestionArray[i].suggestions) )
-    update2(i)
-    // console.log(uid)
-    // console.log(label)
-    // console.log(sugArray)
-    // // setElementID(uid, "hi" + String(i))
-    adder(i)
+    node.className = "hvrclr1"
+    node.addEventListener("click", setInnerHTML.bind(this, node, i) ) 
+    newele.appendChild(node)
 }
 
-
-// TODO: try add event listener outside of function
-function adder(i) {
-    suggestID = document.getElementById("label"+String(i));
-    suggestID.addEventListener("click", 
-        update2.bind(this, i) ) ;
-}
-
-
-function update2(i) {
-    suggestionsObject.suggestionArray[i].suggestion
-
-
-    theid = "label" + String(i)
-    setElementID(theid, suggestionsObject.suggestionArray[i].label + 
-        " | " + randomArrayElement(suggestionsObject.suggestionArray[i].suggestions))
+function setInnerHTML(node, i) {
+    node.innerHTML = suggestionsObject.suggestionArray[i].label + " | "
+    + randomArrayElement(suggestionsObject.suggestionArray[i].suggestions)
 }
 
 
