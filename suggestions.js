@@ -13,6 +13,7 @@ suggestionsObject = {
         { "label":"C",        "suggestions":["C0", "C1", "C2", "C3", "C4"]  },
         { "label":"D",        "suggestions":["D0", "D1", "D2", "D3", "D4"]  },
         { "label":"E",        "suggestions":["E0", "E1", "E2", "E3", "E4"]  },
+        { "label":"F",        "suggestions":["F0", "F1", "F2", "F3", "F4", "F5", "F6"]  },
     ]
 }
 
