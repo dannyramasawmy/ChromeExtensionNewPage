@@ -3,19 +3,6 @@
 // ================================================================
 // Data is stored in arrays and objects in data.js.
 // Define variables here when testing.
-// Temporary/Test object for suggestions.
-suggestionsObject = {
-    "title":"Automated Suggestions:",
-    "containerType":"suggestions",
-    "suggestionArray": [
-        { "label":"A",        "suggestions":["A0", "A1", "A2", "A3", "A4"]  },
-        { "label":"B",        "suggestions":["B0", "B1", "B2", "B3", "B4"]  },
-        { "label":"C",        "suggestions":["C0", "C1", "C2", "C3", "C4"]  },
-        { "label":"D",        "suggestions":["D0", "D1", "D2", "D3", "D4"]  },
-        { "label":"E",        "suggestions":["E0", "E1", "E2", "E3", "E4"]  },
-        { "label":"F",        "suggestions":["F0", "F1", "F2", "F3", "F4", "F5"]  },
-    ]
-}
 
 // ================================================================
 //  FUNCTIONS

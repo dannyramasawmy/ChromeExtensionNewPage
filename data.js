@@ -39,6 +39,25 @@ webLinksObject = {
 // ================================================================
 //  PRACTICE SUGGESTIONS
 // ================================================================
+
+// Temporary/Test object for suggestions.
+suggestionsObject = {
+    "title":"Automated Suggestions:",
+    "containerType":"suggestions",
+    "suggestionArray": [
+        { "label":"A",        "suggestions":["A0", "A1", "A2", "A3", "A4"]  },
+        { "label":"B",        "suggestions":["B0", "B1", "B2", "B3", "B4"]  },
+        { "label":"C",        "suggestions":["C0", "C1", "C2", "C3", "C4"]  },
+        { "label":"D",        "suggestions":["D0", "D1", "D2", "D3", "D4"]  },
+        { "label":"E",        "suggestions":["E0", "E1", "E2", "E3", "E4"]  },
+        { "label":"F",        "suggestions":["F0", "F1", "F2", "F3", "F4", "F5"]  },
+    ]
+}
+
+
+// ================================================================
+//  PRACTICE SUGGESTIONS
+// ================================================================
 // The labels for each suggestion 1-5, each suggestion is an array of items.
 var suggestionsTitle = [
     'Music Practice:'
@@ -47,7 +66,7 @@ var suggestionsLabels = [
     "Scale", 
     "Key", 
     "Pattern", 
-    "Progression", 
+    "Position", 
     "Song"
 ]
 // Scale practice.
@@ -66,14 +85,15 @@ var suggestions1 = [
 ]
 // Practice pattern.
 var suggestions2 = [
-    "1-2-3","1-2-3-1","3-2-1-3","1-2-3-5","Arp 7","Triad",
-    "1-2-3-4","Enclosed root","Enclosed 5th","Honeysuckle","4ths","5ths","6ths","7ths"
+    "1-2-3","1-2-3-1","3-2-1-3","1-2-3-5","Arp 7","Triad","Triad Alt","2-1-3","2-3-1","1-3-2-5","Triad Pair","Triad Asc","Triad Des","2-3-1-5","3-2-1-5",
+    "1-2-3-4","Enclosed root","Enclosed 5th","Honeysuckle","4ths","5ths",
 ]
 // Practice progression.
 var suggestions3 = [
-    "iim7-V7-IM7","iim7b5-V7-im7","I-vim7-iim7-V7",
-    "I-II7-iim7-V7","III7-VI7-II7-V7"
+    "3","4","5","6","7","8","9","10","11","12","13"
 ]
+// "iim7-V7-IM7","iim7b5-V7-im7","I-vim7-iim7-V7",
+// "I-II7-iim7-V7","III7-VI7-II7-V7"
 // Songs to practice.
 var suggestions4 = [
     "Autumn Leaves","Someday my Prince Will Come",
