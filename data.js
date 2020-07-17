@@ -39,25 +39,6 @@ webLinksObject = {
 // ================================================================
 //  PRACTICE SUGGESTIONS
 // ================================================================
-
-// Temporary/Test object for suggestions.
-suggestionsObject = {
-    "title":"Automated Suggestions:",
-    "containerType":"suggestions",
-    "suggestionArray": [
-        { "label":"A",        "suggestions":["A0", "A1", "A2", "A3", "A4"]  },
-        { "label":"B",        "suggestions":["B0", "B1", "B2", "B3", "B4"]  },
-        { "label":"C",        "suggestions":["C0", "C1", "C2", "C3", "C4"]  },
-        { "label":"D",        "suggestions":["D0", "D1", "D2", "D3", "D4"]  },
-        { "label":"E",        "suggestions":["E0", "E1", "E2", "E3", "E4"]  },
-        { "label":"F",        "suggestions":["F0", "F1", "F2", "F3", "F4", "F5"]  },
-    ]
-}
-
-
-// ================================================================
-//  PRACTICE SUGGESTIONS
-// ================================================================
 // The labels for each suggestion 1-5, each suggestion is an array of items.
 var suggestionsTitle = [
     'Music Practice:'
@@ -92,8 +73,7 @@ var suggestions2 = [
 var suggestions3 = [
     "3","4","5","6","7","8","9","10","11","12","13"
 ]
-// "iim7-V7-IM7","iim7b5-V7-im7","I-vim7-iim7-V7",
-// "I-II7-iim7-V7","III7-VI7-II7-V7"
+
 // Songs to practice.
 var suggestions4 = [
     "Autumn Leaves","Someday my Prince Will Come",
@@ -104,3 +84,24 @@ var suggestions4 = [
     "Body and Soul","Maiden Voyage","Fly to me the Moon","Footprints","Black Nile","How High the Moon"
 ]
 
+// Progressions.
+var suggestions5 = ["iim7-V7-IM7","iim7b5-V7-im7","I-vim7-iim7-V7",
+    "I-II7-iim7-V7","III7-VI7-II7-V7"]
+
+// ================================================================
+//  PRACTICE SUGGESTIONS
+// ================================================================
+
+// Temporary/Test object for suggestions.
+suggestionsObject = {
+    "title":"Music Practice:",
+    "containerType":"suggestions",
+    "suggestionArray": [
+        { "label":"Scale",      "suggestions":suggestions0  },
+        { "label":"Key",        "suggestions":suggestions1  },
+        { "label":"Pattern",    "suggestions":suggestions2  },
+        { "label":"Position",   "suggestions":suggestions3  },
+        { "label":"Song",       "suggestions":suggestions4  },
+        { "label":"Progression","suggestions":suggestions5  },
+    ]
+}
