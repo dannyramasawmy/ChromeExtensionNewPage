@@ -3,6 +3,19 @@
 // ================================================================
 // Data is stored in arrays and objects in data.js.
 // Define variables here when testing.
+// Temporary/Test object for suggestions.
+suggestionsObject = {
+    "title":"Automated Suggestions:",
+    "containerType":"suggestions",
+    "suggestionArray": [
+        { "label":"A",        "suggestions":["A0", "A1", "A2", "A3", "A4"]  },
+        { "label":"B",        "suggestions":["B0", "B1", "B2", "B3", "B4"]  },
+        { "label":"C",        "suggestions":["C0", "C1", "C2", "C3", "C4"]  },
+        { "label":"D",        "suggestions":["D0", "D1", "D2", "D3", "D4"]  },
+        { "label":"E",        "suggestions":["E0", "E1", "E2", "E3", "E4"]  },
+        { "label":"F",        "suggestions":["F0", "F1", "F2", "F3", "F4", "F5"]  },
+    ]
+}
 
 // ================================================================
 //  FUNCTIONS
@@ -11,17 +24,11 @@
 function setElementID(elementID, inputString) {
     // This function updates different element IDs
     document.getElementById(elementID).innerText = inputString;        
-    
-    // DEBUG
-    console.log("setElementID() is working.")
     }
 
 function randomArrayElement(inputArray) {
     // This function takes an array and returns a random element from that array.
     var elementOut = inputArray[Math.floor( inputArray.length*Math.random() ) ]
-
-    // DEBUG
-    console.log("randomArrayElement() is working.")
     return elementOut;
     }
 
@@ -31,8 +38,8 @@ function formatADT() {
     // Format date/time string.
     var dateString =  "" 
         + (("0"+dt.getDate()).slice(-2)) 
-        +"-"+ (("0"+(dt.getMonth()+1)).slice(-2)) 
-        +"-"+ (dt.getFullYear()) +"       |   "
+        +":"+ (("0"+(dt.getMonth()+1)).slice(-2)) 
+        +":"+ (dt.getFullYear()) +"       |   "
         + (("0"+dt.getHours()).slice(-2)) +":"
         + (("0"+dt.getMinutes()).slice(-2));
     // Return the date string.
@@ -47,9 +54,6 @@ function changePic() {
     document.getElementById("myBackgroundImage").style = 
         "background-image: url(" + backgroundDirectory
         + myImages[Math.floor(myImages.length * Math.random())] + ".jpg)"
-     
-    // DEBUG    
-    console.log("changePic is working.")
 }
 
 function timeKeep() {
@@ -71,10 +75,18 @@ function timeKeep() {
         document.getElementById("myBackgroundImage").style = 
         "background-image: url(backgroundPhotos/port.jpg)"
     }
-
-    // DEBUG
-    console.log("timeKeep() is working.")
 }
+
+function updateSuggestions(index, suggestionsLabel) {
+    // This function updates the suggestions of the specified index.
+    // Create suggestion name.
+    suggestionName = "suggestions" + index.toString()
+    // Set the suggestion.
+    setElementID(suggestionName, suggestionsLabel + " | " + randomArrayElement(window[suggestionName]) )
+    // Return the suggestion name.
+}
+
+// function updateSuggestions2(index, )
 
 function searchText() {
     // This function searches whatever the user typed.
@@ -85,9 +97,6 @@ function searchText() {
         </form> ' 
     // Apply focus to search box straight away.
     document.getElementById("searchBox").focus();
-
-    // DEBUG
-    console.log("searchText() is working.")
 }
 
 // ================================================================
@@ -114,6 +123,18 @@ setElementID("welcomeMessage"  , randomArrayElement(myMsg) )
 document.getElementById("welcomeMessage").addEventListener("click", function () {setElementID("welcomeMessage"  , randomArrayElement(myMsg) )} )
 
 
+// Set suggestions.
+for (i = 0; i < 5; i++) {
+    // Set suggestions title.
+    setElementID("suggestionsTitle", suggestionsTitle)
+    // Update suggestions.
+    updateSuggestions(i, suggestionsLabels[i])
+    // Loop add event listeners for click to change the suggestion.
+    suggestID = document.getElementById("suggestions"+String(i));
+    // Use the .bind(this, arguments) to allow this to work in for-loop.
+    suggestID.addEventListener("click", updateSuggestions.bind(this, i, suggestionsLabels[i]) );
+}
+
 // Set web links.
 linksContainer = document.getElementById("linksContainer");
 linksContainer.innerHTML = '<h1 class="hvrClr2">' + webLinksObject.title + '</h1>'
@@ -134,7 +155,6 @@ for (i = 0; i < webLinksObject.linkArray.length; i++) {
 newele = document.getElementById("suggestionsContainer")
 // Create a title node.
 node = document.createElement("H1")
-node.className = "hvrClr2"
 // Set the inner child.
 node.innerHTML = suggestionsObject.title;
 // Add the child
@@ -153,6 +173,7 @@ function setInnerHTML(node, i) {
     node.innerHTML = suggestionsObject.suggestionArray[i].label + " | "
     + randomArrayElement(suggestionsObject.suggestionArray[i].suggestions)
 }
+
 
 // Every x seconds update welcome message and background.
 var timeInterval = 30 // [seconds]
