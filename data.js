@@ -19,6 +19,10 @@ var myMsg = [
 var myImages = [
     "1","2","3","4","5","6","7","8","9","10"
 ]
+
+// Embed link of spotify playlist
+var spotifyPlaylist = "https://open.spotify.com/embed/playlist/3z8MQZZyYrPq4cIqTE7MOT"
+
 // ================================================================
 //  WEB LINKS
 // ================================================================

@@ -154,6 +154,17 @@ function setInnerHTML(node, i) {
     + randomArrayElement(suggestionsObject.suggestionArray[i].suggestions)
 }
 
+// Set spotify
+spotifyElement = document.getElementById("spotify")
+// create an iframe
+spotFrame = document.createElement("iframe")
+spotFrame.className = "spotify"
+spotFrame.src = spotifyPlaylist
+spotFrame.allow = "encrypted-media" 
+spotFrame.frameborder="0" 
+spotFrame.allowtransparency="true"
+spotifyElement.appendChild(spotFrame)
+
 // Every x seconds update welcome message and background.
 var timeInterval = 30 // [seconds]
 setInterval(timeKeep, timeInterval * 1000);
