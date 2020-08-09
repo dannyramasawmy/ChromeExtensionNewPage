@@ -141,6 +141,10 @@ h3 {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.spotify {
+    height: 100%;
+    width: 100%;
+}
 
 /* Media query for orientation */
 @media only screen and (orientation: portrait){
@@ -188,4 +192,10 @@ h3 {
         text-align: left;
         color: rgba(255, 255, 255, 0.6);
     }
+
+    .spotify {
+        height: 80;
+        width: 100%
+    }
+    
 }

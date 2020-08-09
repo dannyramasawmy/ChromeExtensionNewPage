@@ -30,7 +30,8 @@ webLinksObject = {
         { "label":"BBC News",           "link":"https://www.bbc.com/"                             },
         { "label":"GDrive",             "link":"https://drive.google.com/drive/my-drive"          },
         { "label":"Email",              "link":"https://www.gmail.com"                            },
-        { "label":"Youtube",            "link":"https://www.youtube.com"                          },  
+        { "label":"Youtube",            "link":"https://www.youtube.com"                          },
+        { "label":"GitHub",             "link":"https://github.com/dannyramasawmy"                },  
         { "label":"Software Toolbox",   "link":"https://dannyramasawmy.github.io/ElasticMatrix/"  },
 
     ]
@@ -47,7 +48,7 @@ var suggestionsLabels = [
     "Scale", 
     "Key", 
     "Pattern", 
-    "Progression", 
+    "Position", 
     "Song"
 ]
 // Scale practice.
@@ -66,14 +67,14 @@ var suggestions1 = [
 ]
 // Practice pattern.
 var suggestions2 = [
-    "1-2-3","1-2-3-1","3-2-1-3","1-2-3-5","Arp 7","Triad",
-    "1-2-3-4","Enclosed root","Enclosed 5th","Honeysuckle","4ths","5ths","6ths","7ths"
+    "1-2-3","1-2-3-1","3-2-1-3","1-2-3-5","Arp 7","Triad","Triad Alt","2-1-3","2-3-1","1-3-2-5","Triad Pair","Triad Asc","Triad Des","2-3-1-5","3-2-1-5",
+    "1-2-3-4","Enclosed root","Enclosed 5th","Honeysuckle","4ths","5ths",
 ]
 // Practice progression.
 var suggestions3 = [
-    "iim7-V7-IM7","iim7b5-V7-im7","I-vim7-iim7-V7",
-    "I-II7-iim7-V7","III7-VI7-II7-V7"
+    "3","4","5","6","7","8","9","10","11","12","13"
 ]
+
 // Songs to practice.
 var suggestions4 = [
     "Autumn Leaves","Someday my Prince Will Come",
@@ -81,6 +82,27 @@ var suggestions4 = [
     "So What","Round Midnight","Rhythm Changes",
     "All the things you are","Major 2-5-1","Minor 2-5-1",
     "Recordame","Stella by Starlight","Blues",
-    "Body and Soul","Maiden Voyage","Fly to me the Moon","Footprints","Black Nile","How High the Moon"
+    "Body and Soul","Maiden Voyage","Fly to me the Moon","Footprints","Black Nile","How High the Moon","Yardbird Suite"
 ]
 
+// Progressions.
+var suggestions5 = ["iim7-V7-IM7","iim7b5-V7-im7","I-vim7-iim7-V7",
+    "I-II7-iim7-V7","III7-VI7-II7-V7"]
+
+// ================================================================
+//  PRACTICE SUGGESTIONS
+// ================================================================
+
+// Temporary/Test object for suggestions.
+suggestionsObject = {
+    "title":"Music Practice:",
+    "containerType":"suggestions",
+    "suggestionArray": [
+        { "label":"Scale",      "suggestions":suggestions0  },
+        { "label":"Key",        "suggestions":suggestions1  },
+        { "label":"Pattern",    "suggestions":suggestions2  },
+        { "label":"Position",   "suggestions":suggestions3  },
+        { "label":"Song",       "suggestions":suggestions4  },
+        { "label":"Progression","suggestions":suggestions5  },
+    ]
+}
