@@ -141,6 +141,30 @@ h3 {
     color: rgba(255, 255, 255, 0.6);
 }
 
+
+header {
+       /* Wrapping of containers with links.  */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+}
+
+header div {
+    margin: 0px;
+
+}
+
+
+header div h3{
+    margin: 0px;
+    
+}
+
+.invisible {
+    text-align: right;
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .spotify {
     height: 100%;
     width: 100%;
