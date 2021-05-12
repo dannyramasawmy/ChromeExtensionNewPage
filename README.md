@@ -1,3 +1,12 @@
+<style>
+    h1 {
+        color: cyan
+    }
+    h2 {
+        color: cyan
+    }
+    </style>
+
 # ChromeExtensionNewPage
 ## Overview
 This extension replaces the new page in google chrome. 
