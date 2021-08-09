@@ -12,7 +12,20 @@ body {
     line-height: 1.5;
     text-align: center;
 
+    margin: 0;
+    overflow: hidden; /* Hide scrollbars */
+    
+    
 }
+canvas {
+    border: 1px solid gray;
+    background: dimgray;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:-1;
+}
+
 
 /* Get rid of cursor highlighting. */
 ::selection {
