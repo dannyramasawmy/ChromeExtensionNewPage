@@ -5,11 +5,20 @@
     h2 {
         color: cyan
     }
+    div {
+        
+    }
     </style>
+
+
+<div>
+
 
 # ChromeExtensionNewPage
 ## Overview
 This extension replaces the new page in google chrome. 
+
+</div>
 
 ## Example
 Link to the website published with github pages here: [New Page Extension](https://dannyramasawmy.github.io/ChromeExtensionNewPage/)
