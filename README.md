@@ -31,6 +31,9 @@ The data.js file can be edited to personalise the page, messages and links.
 Add your own images (.jpg) to the backgroundPhotos folder, add the name of the images to the data.js file afterwards. 
 
 ## Tree
+<details><summary></summary>
+<p>
+
 Tree was compiled 2020-06-27:
 ``` bash
 .
@@ -49,30 +52,6 @@ Tree was compiled 2020-06-27:
 ├── manifest.json
 ├── newPageStyle.css
 └── suggestions.js
-```
-
-## MD folding
-<details><summary></summary>
-<p>
-
-Docker: check running containers (all including stopped containers)
-```
-docker ps 
-docker ps –a 
-```
-
-### Live update container gadgetron log files (Inside container)
-```
-tail –f /tmp/gadgetron.log 
-```
-</p>
-</details>
-
-### another folding
-<details><summary></summary>
-<p>
-```
-python venv venv
 ```
 </p>
 </details>
