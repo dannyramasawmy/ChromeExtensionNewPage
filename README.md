@@ -50,3 +50,30 @@ Tree was compiled 2020-06-27:
 ├── newPageStyle.css
 └── suggestions.js
 ```
+
+## MD folding
+<details><summary></summary>
+<p>
+
+Docker: check running containers (all including stopped containers)
+```
+docker ps 
+docker ps –a 
+```
+
+### Live update container gadgetron log files (Inside container)
+```
+tail –f /tmp/gadgetron.log 
+```
+</p>
+</details>
+
+### another folding
+<details><summary></summary>
+<p>
+```
+python venv venv
+```
+</p>
+</details>
+
