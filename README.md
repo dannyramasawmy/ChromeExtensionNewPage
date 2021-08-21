@@ -34,24 +34,36 @@ Add your own images (.jpg) to the backgroundPhotos folder, add the name of the i
 <details><summary></summary>
 <p>
 
-Tree was compiled 2020-06-27:
+Tree was compiled 2021-08-21:
+
 ``` bash
 .
-├── background.js
+├── background.js   
 ├── backgroundPhotos
-│   ├── 1.jpg
-│   ├── 2.jpg
-│   ├── 3.jpg
-│   ├── 4.JPG
-│   ├── 5.jpg
-│   ├── 6.jpg
-│   ├── 7.jpg
-│   └── 8.jpg
+│   ├── 10.jpg      
+│   ├── 1.jpg       
+│   ├── 2.jpg       
+│   ├── 3.jpg
+│   ├── 4.jpg
+│   ├── 5.jpg
+│   ├── 6.jpg
+│   ├── 7.jpg
+│   ├── 8.jpg
+│   ├── 9.jpg
+│   └── port.jpg
+├── data.js
+├── icons
+│   ├── logo-128.png
+│   ├── logo-32.png
+│   └── logo-64.png
 ├── index.html
-├── Logo.png
 ├── manifest.json
 ├── newPageStyle.css
-└── suggestions.js
+├── README.md
+├── settings.html
+├── settings.js
+├── suggestions.js
+└── test.md
 ```
     
 </p>
