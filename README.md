@@ -31,7 +31,11 @@ The data.js file can be edited to personalise the page, messages and links.
 Add your own images (.jpg) to the backgroundPhotos folder, add the name of the images to the data.js file afterwards. 
 
 ## Tree
+<details><summary></summary>
+<p>
+
 Tree was compiled 2021-08-21:
+
 ``` bash
 .
 ├── background.js   
@@ -61,3 +65,7 @@ Tree was compiled 2021-08-21:
 ├── suggestions.js
 └── test.md
 ```
+    
+</p>
+</details>
+
